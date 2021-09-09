@@ -1,0 +1,42 @@
+body {
+    margin: 0px;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-position: 50% 50%;
+    background-size: cover;
+    background: url("https://wallpaperaccess.com/full/1483728.jpg");
+}
+
+.header {
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    background-color: transparent;
+    margin-top:20%;
+}
+
+.container{
+    padding:0.01em 15px
+}
+.center{
+    text-align:center!important
+}
+
+.button {
+    margin:20px auto;
+    display:block;
+    border:0.2em solid #aaaaaa;
+    background-color: #aaaaaa;
+    box-sizing: border-box;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-weight:400;
+    color:#000000;
+    text-align:center;
+    transition: all 0.15s;
+}
+.button:hover{
+    color:#837575;
+    border-color:#DDDDDD;
+}

@@ -1,0 +1,38 @@
+<div *ngIf="loading" class="loading">
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
+<div class="empty"></div>
+<div class="hdr">
+    <h1><b>Spacestagram</b></h1>
+    <form [formGroup]="startDate" (ngSubmit)="onSubmit()">
+        <input class="search" type="text" formControlName="startDate" placeholder="YYYY-MM-DD">
+    </form>
+</div>
+
+<body>
+    <div *ngIf="imageList; then displayImages"></div>
+        <ng-template #displayImages>
+            <div *ngFor="let image of imageList">
+                <div class="card center" style="width: 613px;">
+                    <div class="container center">
+                        <img class="pfp" src="https://i.postimg.cc/htVmhMcn/58429400a6515b1e0ad75acc.png">
+                        <div class="poster">{{image.title}}</div>
+                        <img class="post" [src]="image.url">
+
+                        <i class="like" [ngClass]="image.liked == 1 ? 'fas fa-heart highlight' : 'far fa-heart'"
+                        onMouseOver="this.style.cursor='pointer'"
+                        (click)="handleLike(image)"
+                        ></i>
+
+                        <div class="des">
+                            <b>NASA </b>{{image.explanation}}
+                        </div>
+
+                        <div class="date">
+                            {{image.date}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+</body>
