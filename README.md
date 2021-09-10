@@ -1,3 +1,3 @@
 # Repo for heroku deployment
-
-Basically a copy of: https://github.com/SimonYanGit/shopify-fe-challenge 
+Hosted here: https://shopify-fe.herokuapp.com
+Basically a copy of: https://github.com/SimonYanGit/shopify-fe-challenge for deployment purposes
